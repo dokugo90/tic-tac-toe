@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+}
+
+.body-flex {
+  margin-top: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    45deg, 
+    aqua 0%,
+    aqua 50%,
+    orangered 50%,
+    orangered 100%
+
+  );
+  background-size: cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template: 100px 100px 100px / 100px 100px 100px;
+  justify-content: center;
+  position: absolute;
+  left: 38.4%;
+  top: 20%;
+} 
+.cell:nth-child(9) {
+  border-right: none;
+  border-bottom: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8) {
+  border-bottom: none;
+}
+
+.cell:nth-child(6),
+.cell:nth-child(3) {
+  border-right: none;
+}
+
+.cell {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: 5px solid white;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 0px;
+  outline: none;
+}
+
+.cell:hover::before {
+  
+}
+
+.player-turn {
+  text-align: center;
+}
+
+.result-flex {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 120px;
+  transition: 10s ease ;
+}
+
+.restart-btn {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 white;
+  border-radius: 5px;
+  transition: .2s;
+}
+
+.restart-btn:hover {
+  transform: translateY(5px);
+  box-shadow: 0 0px 0 white;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .8);
+  transition: 10s ease;
+}
+
+.player-turn {
+  position: absolute;
+  left: 42.5%;
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+}
+
+.game-mode {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  background: transparent;
+  border: none;
+  border-bottom: 5px solid white;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: .1s;
+  border-radius: 5px;
+}
+
+.game-mode:hover {
+  background: rgba(0, 0, 0, .1);
+}
+
+.optOne {
+  background: black;
+}
